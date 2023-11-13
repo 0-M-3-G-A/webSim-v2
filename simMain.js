@@ -435,19 +435,12 @@ function animate() {
     orbitQuaternion(neptuneParameters.orbitInclination, neptune.position)
     
     mercuryLabel.position.set(mercury.position.x, mercury.position.y, mercury.position.z)
-
     venusLabel.position.set(venus.position.x, venus.position.y, venus.position.z )
-
     earthLabel.position.set(earth.position.x, earth.position.y, earth.position.z)
-
     marsLabel.position.set(mars.position.x, mars.position.y, mars.position.z)
-
     jupitarLabel.position.set(jupitar.position.x, jupitar.position.y, jupitar.position.z)
-
     saturnLabel.position.set(saturn.position.x, saturn.position.y, saturn.position.z)
-
     uranusLabel.position.set(uranus.position.x, uranus.position.y, uranus.position.z)
-
     neptuneLabel.position.set(neptune.position.x, neptune.position.y, neptune.position.z)
 
 
