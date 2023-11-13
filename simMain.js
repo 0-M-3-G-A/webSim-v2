@@ -314,14 +314,14 @@ scene.add(nepHelper)
 
 // }
 
-// function sG(sN){
-//   function gaussianRandom(mean=0, stdev=1) {
-//     const u = 1 - Math.random(); // Converting [0,1) to (0,1]
-//     const v = Math.random();
-//     const z = Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
-//     // Transform to the desired mean and standard deviation:
-//     return z * stdev + mean;
-//   }
+ function sG(sN){
+   function gaussianRandom(mean=0, stdev=1) {
+     const u = 1 - Math.random(); // Converting [0,1) to (0,1]
+    const v = Math.random();
+     const z = Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
+     // Transform to the desired mean and standard deviation:
+     return z * stdev + mean;
+   }
 //   // function randomiser(){
 //   //   const size = [ 66000000000000 , 27500, 700 ]
 //   //   const color = [0xFF0000, 0x0000FF, 0xFFFF00]
@@ -334,10 +334,10 @@ scene.add(nepHelper)
 //   // const Color = [0xFF0000, 0x0000FF, 0xFFFF00]
 //   // var a =  Size[Math.random()*2]
 //   // var b =Color[Math.random()*2]
-//   const starPositions = new Float32Array(sN * 3)
-//   for(let i=0; i<sN; i++){
-//     starPositions[i] = ((gaussianRandom() - 0.5) * 1000000000000)
-//   }
+   const starPositions = new Float32Array(sN * 3)
+   for(let i=0; i<sN; i++){
+     starPositions[i] = ((gaussianRandom() - 0.5) * 1000000000000)
+   }
  
 //   // for(let i=0; i<sN; i++){
 //   //   const Size = [ 660000, 27.5, 7 ]
@@ -360,44 +360,20 @@ scene.add(nepHelper)
 //   for(let i=0; i<sN; i++){
 //     sizeArray[i] = Size[Math.floor(Math.random()*2)]
 //   }
-//   const particleGeometry = new THREE.BufferGeometry()
-//   const particleMaterial = new THREE.PointsMaterial({
-//     transparent: true,
-//     blending: THREE.AdditiveBlending,
-//   })
-
-//   particleGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
-//   particleGeometry.setAttribute('size', new THREE.BufferAttribute(sizeArray, 1) )
-//   const particleMesh = new THREE.Points(particleGeometry, particleMaterial)
-//   return particleMesh
-  
-// }
-
-function starGen(SNO){
-  function gaussianRandom(mean=0, stdev=1) {
-    const u = 1 - Math.random(); // Converting [0,1) to (0,1]
-    const v = Math.random();
-    const z = Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
-    // Transform to the desired mean and standard deviation:
-    return z * stdev + mean;
-  }
-
-  const starPositions = new Float32Array(SNO * 3)
-   for(let i=0; i<sN; i++){
-       starPositions[i] = ((gaussianRandom() - 0.5) * 1000000000000)
-     }
-    
    const particleGeometry = new THREE.BufferGeometry()
    const particleMaterial = new THREE.PointsMaterial({
-   
+     transparent: true,
+     blending: THREE.AdditiveBlending,
    })
 
+   particleGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3))
+   particleGeometry.setAttribute('size', new THREE.BufferAttribute(sizeArray, 1) )
+   const particleMesh = new THREE.Points(particleGeometry, particleMaterial)
+   return particleMesh
   
+ }
 
-  
 
-  
-}
 
 
 
