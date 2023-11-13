@@ -1,8 +1,6 @@
 import './simStyle.css';
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer';
-//import { CSS3DRenderer, CSS3DObject } from 'three/addons/renderers/CSS3DRenderer.js';
 import * as THREE from 'three';
-//import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
 import {RGBELoader} from 'three/examples/jsm/loaders/RGBELoader';
 
